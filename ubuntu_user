@@ -9,13 +9,13 @@ clear
 bash < <(curl -s https://raw.github.com/edjames/just_right/develop/apt-update)
 
 echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..."
-  sudo apt-get install ubuntu-restricted-extras
+  sudo apt-get install ubuntu-restricted-extras -y
   sudo wget http://www.medibuntu.org/sources.list.d/oneiric.list -O /etc/apt/sources.list.d/medibuntu.list
-  sudo apt-get --quiet update && sudo apt-get install medibuntu-keyring && sudo apt-get --quiet update
-  sudo apt-get install libdvdcss2
+  sudo apt-get update -qq -y && sudo apt-get install medibuntu-keyring -y && sudo apt-get update -qq -y
+  sudo apt-get install libdvdcss2 -y
 
 echo "Installing Compiz Config Settings Manager ..."
-  sudo apt-get install compizconfig-settings-manager
+  sudo apt-get install compizconfig-settings-manager -y
 
 echo "Installing Synaptic ..."
   sudo apt-get install synaptic
