@@ -21,7 +21,25 @@ Run this one-liner to setup all general Ubuntu stuff:
 
 **What gets set up**
 
-* To be confirmed...
+* Ubuntu Restricted Extras
+* Compiz Config Settings Manager
+* Synaptic
+* GNOME Tweak Tool
+* VLC
+* Jupiter
+* Caffeine
+* Web apps and Sushi file previewer
+* Simple LightDM Manager
+* Sysmonitor App Indicator
+* OpenJDK (Java 7) - optional
+
+**Additional apps that need to be installed manually**
+
+Download pages for the folowing apps will be opened in your default browser.
+
+* VirtualBox
+* Skype
+* RubyMine
 
 Rails Developer
 ---------------
@@ -33,12 +51,12 @@ Some things are automatically installed while others are optional. Optional item
 
 **What gets set up**
 
-* SSH key (optional)
+* SSH key - optional
 * Essential Ubuntu libraries
 * Ruby 1.8.7 from Ubuntu repostories with additional libraries
 * Git and Git Gui
 * MySQL 5.1 with admin GUI tools
-* MongoDB 2.0.1 (optional)
+* MongoDB 2.0.1 - optional
 * ack
 * ImageMagick
 * RVM (Ruby Version Manager) with these rubies: 1.8.7 stable and 1.9.2 stable
