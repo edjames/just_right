@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo "Using apt-get to install OS packages so let's update it first ..."
-  sudo apt-get update -y
+  sudo apt-get --quiet update -y
