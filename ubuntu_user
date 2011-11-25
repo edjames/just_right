@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+clear
+
+echo "You are about to set your Ubuntu machine just right."
+echo -n "Press [ENTER] to begin ..."
+read USER_COMFIRM
+
+echo "Checking for SSH key ..."
+if [[ -f ~/.ssh/id_rsa.pub ]]; then
+  echo -n 'Default SSH key already exists. '
+fi
+echo -n 'Do you want to create a new SSH key? (y/n) '
+read CREATE_SSH_KEY
+[ "$CREATE_SSH_KEY" = "y" ] && ssh-keygen -t rsa
+
+#echo "Copying public key to clipboard. Paste it into your Github account ..."
+#  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | xclip
+#  open https://github.com/account/ssh
+
+echo "Using apt-get to install OS packages so let's update it first ..."
+  sudo apt-get update -y
+
+echo "Installing OS packages. You will be prompted for your password ..."
+  sudo apt-get install build-essential openssl ri ruby ruby1.8 ruby-dev rake libruby1.8 git-gui gitk libxslt1-dev libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison curl -y
+
+echo " +----------------------------------------+ "
+echo " | Your Ubuntu machine is now just right! |"
+echo " +----------------------------------------+ "
+
+# Exit cleanly.
+exit 0
