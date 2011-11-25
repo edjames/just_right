@@ -24,6 +24,7 @@ Run this one-liner to setup all general Ubuntu stuff:
 * Ubuntu Restricted Extras
 * Compiz Config Settings Manager
 * Synaptic
+* Terminator
 * GNOME Tweak Tool
 * VLC
 * Jupiter
