@@ -56,10 +56,10 @@ echo -n "Do you want to install OpenJDK (Java 7)? (y/n) "
 read USER_COMFIRM
 [ "$USER_COMFIRM" = "y" ] && sudo apt-get install openjdk-7-jre
 
-
-
-
-
+echo "Opening additinoal application in default browser ..."
+  xdg-open http://www.skype.com/intl/en/get-skype/on-your-computer/linux/
+  xdg-open https://www.virtualbox.org/wiki/Linux_Downloads
+  xdg-open http://www.jetbrains.com/ruby/
 
 echo " +----------------------------------------+ "
 echo " | Your Ubuntu machine is now just right! |"
