@@ -1,34 +1,24 @@
 #!/usr/bin/env bash
 
-clear
-
 echo "You are about to set up your Ruby on Rails development environment just right."
 echo -n "Press [ENTER] to begin ..."
 read USER_COMFIRM
 
-echo "Checking for SSH key ..."
-if [[ -f ~/.ssh/id_rsa.pub ]]; then
-  echo -n 'Default SSH key already exists. '
-fi
-echo -n 'Do you want to create a new SSH key? (y/n) '
-read USER_COMFIRM
-[ "$USER_COMFIRM" = "y" ] && ssh-keygen -t rsa
+clear
 
-#echo "Copying public key to clipboard. Paste it into your Github account ..."
-#  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | xclip
-#  open https://github.com/account/ssh
+bash < <(curl -s https://raw.github.com/edjames/just_right/master/ssh)
 
-echo "Using apt-get to install OS packages so let's update it first ..."
-  sudo apt-get update -y
+bash < <(curl -s https://raw.github.com/edjames/just_right/master/apt-update)
 
-echo "Installing OS packages. You will be prompted for your password ..."
+echo "Installing OS packages ... "
   sudo apt-get install build-essential openssl ri ruby ruby1.8 ruby-dev rake libruby1.8 git-gui gitk libxslt1-dev libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison curl -y
 
 echo "Installing MySQL 5.1. You will need to enter a root password ..."
   sudo apt-get install mysql-client-5.1 mysql-server-5.1 libmysqlclient-dev libmysql-ruby mysql-admin
 
-echo "Installing mongoDB-2.0.1 ..."
-  # see this: http://crazygui.wordpress.com/2011/10/31/installing-mongodb-2-0-on-ubuntu-11-10/
+echo -n "Do you want to install MongoDB? (y/n) "
+read USER_CONFIRM
+[ "$USER_CONFIRM" = "y" ] && bash < <(curl -s https://raw.github.com/edjames/just_right/master/ubuntu_user)
 
 echo "Installing ack, a good way to search through files ..."
   sudo apt-get install ack-grep -y

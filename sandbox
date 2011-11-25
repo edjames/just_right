@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# 
+# This file is NOT included in the Just Right project.
+# It is only to be used for testing and proving that
+# commands and routines actually run successfully.
+# 
+
+clear
+
+echo "You are about to set your machine up for Ruby on Rails development."
+echo -n "Press [ENTER] to begin ..."
+read USER_COMFIRM
+
+echo -n "Checking for SSH key... "
+if [[ -f ~/.ssh/id_rsa2.pub ]]; then
+  echo -n 'Default SSH key already exists. '
+fi
+echo -n 'Do you want to create a new SSH key? (y/n) '
+read CREATE_SSH_KEY
+[ "$CREATE_SSH_KEY" = "y" ] && ssh-keygen -t rsa
+
+echo " +--------------------------------------------+ "
+echo " | Your development environment is now ready! |"
+echo " +--------------------------------------------+ "
+
+# Exit cleanly.
+exit 0
+
+# echo Please, enter your name
+# read NAME
+# echo "Hi $NAME!"
