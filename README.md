@@ -38,7 +38,7 @@ Some things are automatically installed while others are optional. Optional item
 * Ruby 1.8.7 from Ubuntu repostories with additional libraries
 * Git and Git Gui
 * MySQL 5.1 with admin GUI tools
-* mongoDB (optional)
+* MongoDB 2.0.1 (optional)
 * ack
 * ImageMagick
 * RVM (Ruby Version Manager) with these rubies: 1.8.7 stable and 1.9.2 stable
