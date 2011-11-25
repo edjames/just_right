@@ -6,7 +6,7 @@ read USER_COMFIRM
 
 clear
 
-bash < <(curl -s https://raw.github.com/edjames/just_right/master/apt-update)
+bash < <(curl -s https://raw.github.com/edjames/just_right/develop/apt-update)
 
 echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..."
   sudo apt-get install ubuntu-restricted-extras
@@ -19,6 +19,9 @@ echo "Installing Compiz Config Settings Manager ..."
 
 echo "Installing Synaptic ..."
   sudo apt-get install synaptic
+
+echo "Installing Terminator ..."
+  sudo apt-get install terminator
 
 echo "Installing GNOME Tweak Tool ..."
   sudo apt-get install gnome-tweak-tool
