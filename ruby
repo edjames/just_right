@@ -3,6 +3,7 @@
 echo "Installing RVM (Ruby Version Manager) ..."
   curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer ; chmod +x rvm-installer ; ./rvm-installer --version latest
   rm rvm-installer
+  source ~/.bashrc
 
 echo "Installing Ruby 1.8.7 stable ..."
   rvm install 1.8.7

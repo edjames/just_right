@@ -21,6 +21,7 @@ Run this one-liner to setup all general Ubuntu stuff:
 
 **What gets set up**
 
+* Medibuntu repositories
 * Ubuntu Restricted Extras
 * Compiz Config Settings Manager
 * Synaptic
