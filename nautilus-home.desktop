@@ -1,0 +1,54 @@
+# put this in /usr/share/applications/
+
+[Desktop Entry]
+Name=Home Folder
+GenericName=Home Folder
+X-GNOME-FullName=Home Folder
+Comment=Open your favourite folders in Nautilus
+Exec=nautilus %U
+Icon=user-home
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Core;
+StartupNotify=true
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=nautilus
+X-GNOME-Bugzilla-Component=general
+X-Ubuntu-Gettext-Domain=nautilus
+
+X-Ayatana-Desktop-Shortcuts=Home;Documents;Downloads;Installs;Music;Pictures;Videos;
+
+[Home Shortcut Group]
+Name=Home
+Exec=nautilus
+OnlyShowIn=Unity
+
+[Documents Shortcut Group]
+Name=Documents
+Exec=nautilus Documents/
+OnlyShowIn=Unity
+
+[Downloads Shortcut Group]
+Name=Downloads
+Exec=nautilus Downloads/
+OnlyShowIn=Unity
+
+[Installs Shortcut Group]
+Name=Installs
+Exec=nautilus Installs/
+OnlyShowIn=Unity
+
+[Music Shortcut Group]
+Name=Music
+Exec=nautilus Music/
+OnlyShowIn=Unity
+
+[Pictures Shortcut Group]
+Name=Pictures
+Exec=nautilus Pictures/
+OnlyShowIn=Unity
+
+[Videos Shortcut Group]
+Name=Videos
+Exec=nautilus Videos/
+OnlyShowIn=Unity

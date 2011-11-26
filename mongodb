@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# http://crazygui.wordpress.com/2011/10/31/installing-mongodb-2-0-on-ubuntu-11-10/
+
+echo "Downloading and extracting binaries for mongoDB-2.0.1 ..."
+  curl -s http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.0.1.tgz
+  sudo tar -zxf mongodb-linux-x86_64-2.0.1.tgz -C /usr/local
+  rm mongodb-linux-x86_64-2.0.1.tgz
+
+echo "Configuring symbolic links ..."
+  sudo ln -s /usr/local/mongodb-linux-x86_64-2.0.1.tgz /usr/local/mongodb
+  sudo ln -s /usr/local/mongodb/bin/bsondump /usr/local/bin/bsondump
+  sudo ln -s /usr/local/mongodb/bin/mongo /usr/local/bin/mongo
+  sudo ln -s /usr/local/mongodb/bin/mongod /usr/local/bin/mongod
+  sudo ln -s /usr/local/mongodb/bin/mongodump /usr/local/bin/mongodump
+  sudo ln -s /usr/local/mongodb/bin/mongoexport /usr/local/bin/mongoexport
+  sudo ln -s /usr/local/mongodb/bin/mongofiles /usr/local/bin/mongofiles
+  sudo ln -s /usr/local/mongodb/bin/mongoimport /usr/local/bin/mongoimport
+  sudo ln -s /usr/local/mongodb/bin/mongorestore /usr/local/bin/mongorestore
+  sudo ln -s /usr/local/mongodb/bin/mongos /usr/local/bin/mongos
+  sudo ln -s /usr/local/mongodb/bin/mongosniff /usr/local/bin/mongosniff
+  sudo ln -s /usr/local/mongodb/bin/mongostat /usr/local/bin/mongostat
+
+echo "Setting up Linux service to start MongoDB ..."
+  wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/mongod
+  sudo mv mongod /etc/init.d/mongod
+  sudo chmod +x /etc/init.d/mongod
+
+echo "Configuring system use for MongoDB ..."
+  sudo useradd mongodb
+  sudo mkdir -p /var/lib/mongodb
+  sudo mkdir -p /var/log/mongodb
+  sudo chown mongodb.mongodb /var/lib/mongodb
+  sudo chown mongodb.mongodb /var/log/mongodb
+
+echo -n "Activating MongoDB service to start on boot ... "
+  sudo update-rc.d mongod defaults
+
+echo "MongoDB installation completed."
