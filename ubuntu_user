@@ -40,8 +40,7 @@ echo "Installing Caffeine to stop screensaver interruptions ..."
 echo "Installing web apps and Sushi file previewer ..."
   sudo add-apt-repository ppa:webupd8team/gnome3 -y
   sudo apt-get update -qq
-  sudo apt-get install epiphany-browser -y -qq
-  sudo apt-get install gnome-sushi -y -qq
+  sudo apt-get install epiphany-browser gnome-sushi -y -qq
 
 echo "Installing Simple LightDM Manager ..."
   sudo add-apt-repository ppa:claudiocn/slm -y
