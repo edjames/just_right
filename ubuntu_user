@@ -6,7 +6,7 @@ read USER_COMFIRM
 
 clear
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/apt-update)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/apt-update)"
 
 echo "Adding medibuntu repositories ..."
   sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list
@@ -68,7 +68,7 @@ echo "Opening additional application pages in default browser ..."
   xdg-open http://www.jetbrains.com/ruby/
 
 echo " +----------------------------------------+ "
-echo " | Your Ubuntu machine is now just right! |"
+echo " | Your Ubuntu machine is now just right! | "
 echo " +----------------------------------------+ "
 
 # Exit cleanly.
