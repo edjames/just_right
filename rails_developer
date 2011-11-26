@@ -6,12 +6,12 @@ read USER_COMFIRM
 
 clear
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/ssh)"
-
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/apt-update)"
 
 echo "Installing OS packages ... "
   sudo apt-get install build-essential openssl ri ruby ruby1.8 ruby-dev rake libruby1.8 git-gui gitk libxslt1-dev libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison xclip -y -qq
+
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/ssh)"
 
 echo "Installing MySQL 5.1. You will need to enter a root password ..."
   sudo apt-get install mysql-client-5.1 mysql-server-5.1 libmysqlclient-dev libmysql-ruby mysql-admin -y -qq
