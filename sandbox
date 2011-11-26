@@ -8,6 +8,8 @@
 
 clear
 
+export BASH_ENV="something"
+
 echo "You are about to set your machine up for Ruby on Rails development."
 echo -n "Press [ENTER] to begin ..."
 read USER_COMFIRM
