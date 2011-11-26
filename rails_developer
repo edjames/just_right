@@ -6,9 +6,9 @@ read USER_COMFIRM
 
 clear
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/ssh)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/ssh)"
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/apt-update)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/apt-update)"
 
 echo "Installing OS packages ... "
   sudo apt-get install build-essential openssl ri ruby ruby1.8 ruby-dev rake libruby1.8 git-gui gitk libxslt1-dev libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison xclip -y -qq
@@ -18,7 +18,7 @@ echo "Installing MySQL 5.1. You will need to enter a root password ..."
 
 echo -n "Do you want to install MongoDB? (y/n) "
 read USER_CONFIRM
-[ "$USER_CONFIRM" = "y" ] && bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/ubuntu_user)"
+[ "$USER_CONFIRM" = "y" ] && bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/ubuntu_user)"
 
 echo "Installing ack, a good way to search through files ..."
   sudo apt-get install ack-grep -y
@@ -26,7 +26,7 @@ echo "Installing ack, a good way to search through files ..."
 echo "Installing ImageMagick, good for cropping and re-sizing images ..."
   sudo apt-get install imagemagick --fix-missing -y
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/ruby)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/develop/ruby)"
 
 echo " +---------------------------------------------------------------+ "
 echo " | Your Ruby on Rails development environment is now just right! |"
