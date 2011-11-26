@@ -17,7 +17,7 @@ Ubuntu User
 -----------
 Run this one-liner to setup all general Ubuntu stuff:
 
-    bash < <(curl -s https://raw.github.com/edjames/just_right/master/ubuntu_user)
+    bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/ubuntu_user)"
 
 **What gets set up**
 
@@ -46,7 +46,7 @@ Rails Developer
 ---------------
 Run this one-liner to setup all Rails development stuff:
 
-    bash < <(curl -s https://raw.github.com/edjames/just_right/master/rails_developer)
+    bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/rails_developer)"
 
 Some things are automatically installed while others are optional. Optional items will prompt you for confirmation before installing.
 
