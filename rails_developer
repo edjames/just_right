@@ -9,7 +9,7 @@ clear
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/apt-update)"
 
 echo "Installing OS packages ... "
-  sudo apt-get install build-essential openssl ri ruby ruby1.8 ruby-dev rake libruby1.8 git-gui gitk libxslt1-dev libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison xclip -y -qq
+  sudo apt-get install build-essential openssl ri ruby ruby1.8 ruby-dev rake libruby1.8 git-gui gitk libxslt1-dev libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison xclip libqt4-dev libqtwebkit-dev -y -qq
 
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/ruby)"
 
