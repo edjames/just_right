@@ -34,6 +34,7 @@ Run this one-liner to setup all general Ubuntu stuff:
 * Web apps and Sushi file previewer
 * Simple LightDM Manager
 * Sysmonitor App Indicator
+* Dropbox
 * OpenJDK (Java 7) - optional
 
 **Additional apps that need to be installed manually**
@@ -64,3 +65,9 @@ Some things are automatically installed while others are optional. Optional item
 * ImageMagick
 * RVM (Ruby Version Manager) with these rubies: 1.8.7 stable and 1.9.2 stable
 * A bunch of gems required for almost any decent Rails application
+
+TODO
+----
+* Deal with nautilus-home.desktop file properly
+* Make browser opening at the end an optional action
+* Show more help information
