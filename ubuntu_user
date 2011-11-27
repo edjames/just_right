@@ -19,6 +19,9 @@ echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..."
   sudo apt-get install ubuntu-restricted-extras libdvdread4 -y -qq
   sudo /usr/share/doc/libdvdread4/install-css.sh
 
+echo "Installing Configuration Editor (dconf-tools) ..."
+  sudo apt-get install dconf-tools
+
 echo "Installing Compiz Config Settings Manager ..."
   sudo apt-get install compizconfig-settings-manager -y -qq
 
@@ -58,6 +61,9 @@ echo "Installing Sysmonitor App Indicator ..."
   sudo add-apt-repository ppa:alexeftimie/ppa -y
   sudo apt-get update -qq
   sudo apt-get install indicator-sysmonitor -y -qq
+
+echo "Installind Dropbox ..."
+  sudo apt-get install nautilus-dropbox
 
 echo -n "Installing OpenJDK (Java 7) ..."
   sudo apt-get install openjdk-7-jre -y -qq
