@@ -23,6 +23,7 @@ Run this one-liner to setup all general Ubuntu stuff:
 
 * Medibuntu repositories
 * Ubuntu Restricted Extras
+* Configuration Editor (dconf-tools)
 * Compiz Config Settings Manager
 * Synaptic
 * Terminator

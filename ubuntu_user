@@ -19,6 +19,9 @@ echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..."
   sudo apt-get install ubuntu-restricted-extras libdvdread4 -y -qq
   sudo /usr/share/doc/libdvdread4/install-css.sh
 
+echo "Installing Configuration Editor (dconf-tools) ..."
+  sudo apt-get install dconf-tools
+
 echo "Installing Compiz Config Settings Manager ..."
   sudo apt-get install compizconfig-settings-manager -y -qq
 
