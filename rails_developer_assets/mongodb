@@ -2,6 +2,7 @@
 
 # http://crazygui.wordpress.com/2011/10/31/installing-mongodb-2-0-on-ubuntu-11-10/
 
+echo " ** Asset ** "
 echo "Downloading and extracting binaries for mongoDB-2.0.1 ..."
   curl -s http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.0.1.tgz
   sudo tar -zxf mongodb-linux-x86_64-2.0.1.tgz -C /usr/local
