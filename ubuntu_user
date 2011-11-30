@@ -62,16 +62,14 @@ echo "Installing Sysmonitor App Indicator ..."
   sudo apt-get update -qq
   sudo apt-get install indicator-sysmonitor -y -qq
 
-echo "Installind Dropbox ..."
-  sudo apt-get install nautilus-dropbox
+echo "Installing Dropbox ..."
+  sudo apt-get install nautilus-dropbox -y -qq
+
+echo "Installing Skype ..."
+  sudo apt-get install skype -y -qq
 
 echo -n "Installing OpenJDK (Java 7) ..."
   sudo apt-get install openjdk-7-jre -y -qq
-
-echo "Opening additional application pages in default browser ..."
-  xdg-open http://www.skype.com/intl/en/get-skype/on-your-computer/linux/
-  xdg-open https://www.virtualbox.org/wiki/Linux_Downloads
-  xdg-open http://www.jetbrains.com/ruby/
 
 echo " +----------------------------------------+ "
 echo " | Your Ubuntu machine is now just right! | "
