@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing Terminator ..."
+  sudo apt-get install terminator -y -qq

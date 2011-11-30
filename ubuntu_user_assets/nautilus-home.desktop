@@ -1,5 +1,3 @@
-# put this in /usr/share/applications/
-
 [Desktop Entry]
 Name=Home Folder
 GenericName=Home Folder
@@ -16,7 +14,7 @@ X-GNOME-Bugzilla-Product=nautilus
 X-GNOME-Bugzilla-Component=general
 X-Ubuntu-Gettext-Domain=nautilus
 
-X-Ayatana-Desktop-Shortcuts=Home;Documents;Downloads;Installs;Music;Pictures;Videos;
+X-Ayatana-Desktop-Shortcuts=Home;Documents;Downloads;Installs;Music;Pictures;Videos;Windows;
 
 [Home Shortcut Group]
 Name=Home
@@ -40,7 +38,7 @@ OnlyShowIn=Unity
 
 [Music Shortcut Group]
 Name=Music
-Exec=nautilus Music/
+Exec=nautilus /media/windows/Users/Ed/Music
 OnlyShowIn=Unity
 
 [Pictures Shortcut Group]
@@ -50,5 +48,10 @@ OnlyShowIn=Unity
 
 [Videos Shortcut Group]
 Name=Videos
-Exec=nautilus Videos/
+Exec=nautilus /media/windows/Users/Ed/Videos
+OnlyShowIn=Unity
+
+[Windows Shortcut Group]
+Name=Windows
+Exec=nautilus /media/windows/Users/Ed/
 OnlyShowIn=Unity

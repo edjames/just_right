@@ -5,22 +5,31 @@
 # It is only to be used for testing and proving that
 # commands and routines actually run successfully.
 # 
+function _execute_asset {
+  echo "curl -s https://raw.github.com/edjames/just_right/develop/$1/$2" ;
+}
+
+function _ubuntu_user_asset {
+  _execute_asset "ubuntu_user_assets" $1 ;
+}
+
+function _shared_asset {
+  _execute_asset "shared_assets" $1 ;
+}
 
 clear
 
-export BASH_ENV="something"
+echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
 
-echo "You are about to set your machine up for Ruby on Rails development."
+_shared_asset "distro_warning" ;
+_ubuntu_user_asset "enter_to_begin" ;
+
+exit
+
 echo -n "Press [ENTER] to begin ..."
 read USER_COMFIRM
+[ "$USER_COMFIRM" = "y" ] && eval "$(cat sandbox2)"
 
-echo -n "Checking for SSH key... "
-if [[ -f ~/.ssh/id_rsa2.pub ]]; then
-  echo -n 'Default SSH key already exists. '
-fi
-echo -n 'Do you want to create a new SSH key? (y/n) '
-read CREATE_SSH_KEY
-[ "$CREATE_SSH_KEY" = "y" ] && ssh-keygen -t rsa
 
 echo " +--------------------------------------------+ "
 echo " | Your development environment is now ready! |"

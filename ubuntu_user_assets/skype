@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing Skype ..."
+  sudo apt-get install skype -y -qq

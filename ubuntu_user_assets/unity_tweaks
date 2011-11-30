@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+unity_file="/usr/share/applications/nautilus-home.desktop"
+
+if [ -f $unity_file ] ; then
+    sudo cp $unity_file "${unity_file}.backup.$(date +%Y%m%d%H%M%S)"
+    sudo echo $(curl -s https://raw.github.com/edjames/just_right/master/ubuntu_user_assets/nautilus-home.desktop) > $unity_file ;
+fi
+
+unset unity_file ;

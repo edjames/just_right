@@ -1,81 +1,60 @@
 #!/usr/bin/env bash
 
-echo "You are about to set your Ubuntu machine just right."
-echo -n "Press [ENTER] to begin ..."
-read USER_COMFIRM
+# Temporary utility functions
+function _execute_asset {
+  eval "$(curl -s https://raw.github.com/edjames/just_right/develop/$1/$2)" ;
+}
+
+function _shared_asset {
+  _execute_asset "shared_assets" $1 ;
+}
+
+function _ubuntu_user_asset {
+  _execute_asset "ubuntu_user_assets" $1 ;
+}
 
 clear
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/apt-update)"
+echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
 
-echo "Adding medibuntu repositories ..."
-  sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list
+_shared_asset "distro_warning" ;
+_shared_asset "enter_to_begin" ;
+
+clear
+
+echo "Retrieving new lists of packages ..."
   sudo apt-get update -qq
-  sudo apt-get install medibuntu-keyring -y -qq --allow-unauthenticated
-  sudo apt-get update -qq
-  sudo apt-get install app-install-data-medibuntu apport-hooks-medibuntu -y -qq
 
-echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..."
-  sudo apt-get install ubuntu-restricted-extras libdvdread4 -y -qq
-  sudo /usr/share/doc/libdvdread4/install-css.sh
+_ubuntu_user_asset "medibuntu"
+_ubuntu_user_asset "restricted_extras"
+_ubuntu_user_asset "dconf-tools"
+_ubuntu_user_asset "compiz"
+_ubuntu_user_asset "synaptic"
+_ubuntu_user_asset "terminator"
+_ubuntu_user_asset "gnome-tweak"
+_ubuntu_user_asset "vlc"
+_ubuntu_user_asset "jupiter"
+_ubuntu_user_asset "caffeine"
+_ubuntu_user_asset "sushi"
+_ubuntu_user_asset "light-dm"
+_ubuntu_user_asset "sysmonitor"
+_ubuntu_user_asset "dropbox"
+_ubuntu_user_asset "skype"
+_ubuntu_user_asset "open-jdk"
+_ubuntu_user_asset "unity_tweaks"
 
-echo "Installing Configuration Editor (dconf-tools) ..."
-  sudo apt-get install dconf-tools
+cat << MSG
 
-echo "Installing Compiz Config Settings Manager ..."
-  sudo apt-get install compizconfig-settings-manager -y -qq
+  +---------------------------------------------------------+
+  | Congratulations! Your Ubuntu machine is now just right! |
+  +---------------------------------------------------------+
 
-echo "Installing Synaptic ..."
-  sudo apt-get install synaptic -y -qq
+MSG
 
-echo "Installing Terminator ..."
-  sudo apt-get install terminator -y -qq
-
-echo "Installing GNOME Tweak Tool ..."
-  sudo apt-get install gnome-tweak-tool -y -qq
-
-echo "Installing VLC ..."
-  sudo apt-get install vlc -y -qq
-
-echo "Installing Jupiter for better power management ..."
-  sudo add-apt-repository ppa:webupd8team/jupiter -y
-  sudo apt-get update -qq
-  sudo apt-get install jupiter -y -qq
-
-echo "Installing Caffeine to stop screensaver interruptions ..."
-  sudo add-apt-repository ppa:caffeine-developers/ppa -y
-  sudo apt-get update -qq
-  sudo apt-get install caffeine python-glade2 -y -qq
-
-echo "Installing web apps and Sushi file previewer ..."
-  sudo add-apt-repository ppa:webupd8team/gnome3 -y
-  sudo apt-get update -qq
-  sudo apt-get install epiphany-browser gnome-sushi -y -qq
-
-echo "Installing Simple LightDM Manager ..."
-  sudo add-apt-repository ppa:claudiocn/slm -y
-  sudo apt-get update -qq
-  sudo apt-get install simple-lightdm-manager -y -qq
-
-echo "Installing Sysmonitor App Indicator ..."
-  sudo add-apt-repository ppa:alexeftimie/ppa -y
-  sudo apt-get update -qq
-  sudo apt-get install indicator-sysmonitor -y -qq
-
-echo "Installind Dropbox ..."
-  sudo apt-get install nautilus-dropbox
-
-echo -n "Installing OpenJDK (Java 7) ..."
-  sudo apt-get install openjdk-7-jre -y -qq
-
-echo "Opening additional application pages in default browser ..."
-  xdg-open http://www.skype.com/intl/en/get-skype/on-your-computer/linux/
-  xdg-open https://www.virtualbox.org/wiki/Linux_Downloads
-  xdg-open http://www.jetbrains.com/ruby/
-
-echo " +----------------------------------------+ "
-echo " | Your Ubuntu machine is now just right! | "
-echo " +----------------------------------------+ "
+# Clean up temporary utility functions
+unset _execute_asset ;
+unset _shared_asset ;
+unset _ubuntu_user_asset ;
 
 # Exit cleanly.
 exit 0

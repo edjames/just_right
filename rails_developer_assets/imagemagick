@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing ImageMagick, good for cropping and re-sizing images ..."
+  sudo apt-get install imagemagick --fix-missing -y

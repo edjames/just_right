@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing Compiz Config Settings Manager ..."
+  sudo apt-get install compizconfig-settings-manager -y -qq
