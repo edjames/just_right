@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
-echo "You are about to set your Ubuntu machine just right."
-echo -n "Press [ENTER] to begin ..."
-read USER_COMFIRM
+GIT_BRANCH="develop"
 
 clear
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/master/apt-update)"
+echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
+
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/distro_warning)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/enter_to_begin)"
+
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/apt-update)"
+
+exit
 
 echo "Adding medibuntu repositories ..."
   sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list

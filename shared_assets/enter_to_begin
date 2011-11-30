@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo
+echo -n "Press [ENTER] to begin or Ctrl-C to exit ..."
+read NO_ACTION
+echo
