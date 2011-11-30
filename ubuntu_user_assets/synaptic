@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing Synaptic ..."
+  sudo apt-get install synaptic -y -qq

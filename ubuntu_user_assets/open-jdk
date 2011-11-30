@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo -n "Installing OpenJDK (Java 7) ..."
+  sudo apt-get install openjdk-7-jre -y -qq
