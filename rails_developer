@@ -1,36 +1,54 @@
 #!/usr/bin/env bash
 
-GIT_BRANCH="develop"
+# Temporary utility functions
+function _execute_asset {
+  eval "$(curl -s https://raw.github.com/edjames/just_right/develop/$1/$2)" ;
+}
+
+function _shared_asset {
+  _execute_asset "shared_assets" $1 ;
+}
+
+function _rails_developer_asset {
+  _execute_asset "rails_developer_assets" $1 ;
+}
 
 clear
 
 echo ; echo "You are about to set up your Ruby on Rails development environment just right." ; echo
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/distro_warning)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/enter_to_begin)"
+_shared_asset "distro_warning" ;
+_shared_asset "enter_to_begin" ;
 
 clear
 
 echo "Retrieving new lists of packages ..."
   sudo apt-get update -qq
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/libraries)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/rvm)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ruby_gems)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ssh)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/mysql)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ack)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/imagemagick)"
+_rails_developer_asset "libraries"
+_rails_developer_asset "rvm"
+_rails_developer_asset "ruby_gems"
+_rails_developer_asset "ssh"
+_rails_developer_asset "mysql"
+_rails_developer_asset "ack"
+_rails_developer_asset "imagemagick"
 
 echo -n "Do you want to install MongoDB? (y/n) "
 read USER_CONFIRM
-[ "$USER_CONFIRM" = "y" ] && bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/mongodb)"
+[ "$USER_CONFIRM" = "y" ] && _rails_developer_asset "mongodb"
 
-echo
-echo " +--------------------------------------------------------------------------------+ "
-echo " | Congratulations! Your Ruby on Rails development environment is now just right! | "
-echo " +--------------------------------------------------------------------------------+ "
-echo
+cat << MSG
+
+  +--------------------------------------------------------------------------------+
+  | Congratulations! Your Ruby on Rails development environment is now just right! |
+  +--------------------------------------------------------------------------------+
+
+MSG
+
+# Clean up temporary utility functions
+unset _execute_asset ;
+unset _shared_asset ;
+unset _rails_developer_asset ;
 
 # Exit cleanly.
 exit 0

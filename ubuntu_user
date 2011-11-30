@@ -1,42 +1,60 @@
 #!/usr/bin/env bash
 
-GIT_BRANCH="develop"
+# Temporary utility functions
+function _execute_asset {
+  eval "$(curl -s https://raw.github.com/edjames/just_right/develop/$1/$2)" ;
+}
+
+function _shared_asset {
+  _execute_asset "shared_assets" $1 ;
+}
+
+function _ubuntu_user_asset {
+  _execute_asset "ubuntu_user_assets" $1 ;
+}
 
 clear
 
 echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/distro_warning)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/enter_to_begin)"
+_shared_asset "distro_warning" ;
+_shared_asset "enter_to_begin" ;
 
 clear
 
 echo "Retrieving new lists of packages ..."
   sudo apt-get update -qq
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/medibuntu)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/restricted_extras)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/dconf-tools)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/compiz)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/synaptic)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/terminator)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/gnome-tweak)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/vlc)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/jupiter)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/caffeine)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/sushi)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/light-dm)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/sysmonitor)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/dropbox)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/skype)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/open-jdk)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/unity_tweaks)"
+_ubuntu_user_asset "medibuntu"
+_ubuntu_user_asset "restricted_extras"
+_ubuntu_user_asset "dconf-tools"
+_ubuntu_user_asset "compiz"
+_ubuntu_user_asset "synaptic"
+_ubuntu_user_asset "terminator"
+_ubuntu_user_asset "gnome-tweak"
+_ubuntu_user_asset "vlc"
+_ubuntu_user_asset "jupiter"
+_ubuntu_user_asset "caffeine"
+_ubuntu_user_asset "sushi"
+_ubuntu_user_asset "light-dm"
+_ubuntu_user_asset "sysmonitor"
+_ubuntu_user_asset "dropbox"
+_ubuntu_user_asset "skype"
+_ubuntu_user_asset "open-jdk"
+_ubuntu_user_asset "unity_tweaks"
 
-echo
-echo " +---------------------------------------------------------+ "
-echo " | Congratulations! Your Ubuntu machine is now just right! | "
-echo " +---------------------------------------------------------+ "
-echo
+cat << MSG
+
+  +---------------------------------------------------------+
+  | Congratulations! Your Ubuntu machine is now just right! |
+  +---------------------------------------------------------+
+
+MSG
+
+# Clean up temporary utility functions
+unset _execute_asset ;
+unset _shared_asset ;
+unset _ubuntu_user_asset ;
 
 # Exit cleanly.
 exit 0

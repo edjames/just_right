@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-echo "+-----------------------------------------------------------------------+"
-echo "| WARNING:                                                              |"
-echo "|                                                                       |"
-echo "| This installer script was built specifically for Ubuntu 11.10 64-bit. |"
-echo "| It may work on Ubuntu 11.10 32-bit but it has not been tested.        |"
-echo "|                                                                       |"
-echo "| Please read the source code to make sure you understand exactly what  |"
-echo "| commands are being used and what libraries are being installed.       |"
-echo "|                                                                       |"
-echo "| You use this installer entirely at your own risk.                     |"
-echo "+-----------------------------------------------------------------------+"
+cat << MSG
+  +-----------------------------------------------------------------------+
+  | WARNING:                                                              |
+  |                                                                       |
+  | This installer script was built specifically for Ubuntu 11.10 64-bit. |
+  | It _might_ work on Ubuntu 11.10 32-bit but it has not been tested.    |
+  |                                                                       |
+  | Please read the source code to make sure you understand exactly what  |
+  | commands are being used and what libraries are being installed.       |
+  |                                                                       |
+  | You use this installer entirely at your own risk.                     |
+  +-----------------------------------------------------------------------+
+MSG

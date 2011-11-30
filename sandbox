@@ -5,18 +5,26 @@
 # It is only to be used for testing and proving that
 # commands and routines actually run successfully.
 # 
+function _execute_asset {
+  echo "curl -s https://raw.github.com/edjames/just_right/develop/$1/$2" ;
+}
+
+function _ubuntu_user_asset {
+  _execute_asset "ubuntu_user_assets" $1 ;
+}
+
+function _shared_asset {
+  _execute_asset "shared_assets" $1 ;
+}
 
 clear
 
-function _do_install {
-  local package ;
-  for package ; do
-    echo "sudo apt-get install ${package}" ;
-  done
-}
+echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
 
-_do_install "package1" ;
-_do_install "package2" ;
+_shared_asset "distro_warning" ;
+_ubuntu_user_asset "enter_to_begin" ;
+
+exit
 
 echo -n "Press [ENTER] to begin ..."
 read USER_COMFIRM
