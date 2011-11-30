@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
 echo "Installing Synaptic ..."
   sudo apt-get install synaptic -y -qq

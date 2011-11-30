@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
+echo "Applying Unity tweaks ..."
+
 unity_file="/usr/share/applications/nautilus-home.desktop"
 
 if [ -f $unity_file ] ; then

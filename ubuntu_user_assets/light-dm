@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
 echo "Installing Simple LightDM Manager ..."
   sudo add-apt-repository ppa:claudiocn/slm -y
   sudo apt-get update -qq

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
 echo "Installing VLC ..."
   sudo apt-get install vlc -y -qq

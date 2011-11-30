@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
 echo "Installing Skype ..."
   sudo apt-get install skype -y -qq

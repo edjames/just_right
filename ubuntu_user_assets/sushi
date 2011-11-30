@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
 echo "Installing web apps and Sushi file previewer ..."
   sudo add-apt-repository ppa:webupd8team/gnome3 -y
   sudo apt-get update -qq

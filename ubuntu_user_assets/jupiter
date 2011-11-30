@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo " ** Asset ** "
 echo "Installing Jupiter for better power management ..."
   sudo add-apt-repository ppa:webupd8team/jupiter -y
   sudo apt-get update -qq
