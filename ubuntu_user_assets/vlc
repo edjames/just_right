@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing VLC ..."
+  sudo apt-get install vlc -y -qq

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Installing Configuration Editor (dconf-tools) ..."
+  sudo apt-get install dconf-tools -y -qq

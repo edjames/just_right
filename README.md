@@ -35,15 +35,8 @@ Run this one-liner to setup all general Ubuntu stuff:
 * Simple LightDM Manager
 * Sysmonitor App Indicator
 * Dropbox
-* OpenJDK (Java 7) - optional
-
-**Additional apps that need to be installed manually**
-
-Download pages for the folowing apps will be opened in your default browser.
-
-* VirtualBox
 * Skype
-* RubyMine
+* OpenJDK (Java 7)
 
 Rails Developer
 ---------------
