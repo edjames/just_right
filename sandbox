@@ -8,19 +8,20 @@
 
 clear
 
-export BASH_ENV="something"
+function _do_install {
+  local package ;
+  for package ; do
+    echo "sudo apt-get install ${package}" ;
+  done
+}
 
-echo "You are about to set your machine up for Ruby on Rails development."
+_do_install "package1" ;
+_do_install "package2" ;
+
 echo -n "Press [ENTER] to begin ..."
 read USER_COMFIRM
+[ "$USER_COMFIRM" = "y" ] && eval "$(cat sandbox2)"
 
-echo -n "Checking for SSH key... "
-if [[ -f ~/.ssh/id_rsa2.pub ]]; then
-  echo -n 'Default SSH key already exists. '
-fi
-echo -n 'Do you want to create a new SSH key? (y/n) '
-read CREATE_SSH_KEY
-[ "$CREATE_SSH_KEY" = "y" ] && ssh-keygen -t rsa
 
 echo " +--------------------------------------------+ "
 echo " | Your development environment is now ready! |"
