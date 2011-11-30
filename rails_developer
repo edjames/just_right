@@ -16,7 +16,7 @@ echo "Retrieving new lists of packages ..."
 
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/libraries)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/rvm)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ruby_environment)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ruby_gems)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ssh)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/mysql)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/ack)"
