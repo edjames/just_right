@@ -2,7 +2,7 @@
 
 # Temporary utility functions
 function _execute_asset {
-  eval "$(curl -s https://raw.github.com/edjames/just_right/develop/$1/$2)" ;
+  eval "$(curl -s https://raw.github.com/edjames/just_right/master/$1/$2)" ;
 }
 
 function _shared_asset {
