@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing ack, a good way to search through files ..."
+echo ; echo "Installing ack, a good way to search through files ..." ; echo
   sudo apt-get install ack-grep -y

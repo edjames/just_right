@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing MySQL 5.1. You will need to enter a root password ..."
+echo ; echo "Installing MySQL 5.1. You will need to enter a root password ..." ; echo
   sudo apt-get install mysql-client-5.1 mysql-server-5.1 libmysqlclient-dev libmysql-ruby mysql-admin -y -qq
