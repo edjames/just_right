@@ -9,6 +9,8 @@ echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/distro_warning)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/enter_to_begin)"
 
+clear
+
 echo "Retrieving new lists of packages ..."
   sudo apt-get update -qq
 

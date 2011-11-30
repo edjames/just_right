@@ -26,9 +26,11 @@ echo -n "Do you want to install MongoDB? (y/n) "
 read USER_CONFIRM
 [ "$USER_CONFIRM" = "y" ] && bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/rails_developer_assets/mongodb)"
 
-echo " +---------------------------------------------------------------+ "
-echo " | Your Ruby on Rails development environment is now just right! | "
-echo " +---------------------------------------------------------------+ "
+echo
+echo " +--------------------------------------------------------------------------------+ "
+echo " | Congratulations! Your Ruby on Rails development environment is now just right! | "
+echo " +--------------------------------------------------------------------------------+ "
+echo
 
 # Exit cleanly.
 exit 0
