@@ -30,6 +30,7 @@ bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubunt
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/dropbox)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/skype)"
 bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/open-jdk)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/ubuntu_user_assets/unity_tweaks)"
 
 echo
 echo " +---------------------------------------------------------+ "
