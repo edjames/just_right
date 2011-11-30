@@ -35,8 +35,6 @@ Run this one-liner to setup all general Ubuntu stuff:
 * Simple LightDM Manager
 * Sysmonitor App Indicator
 * Dropbox
-* Skype
-* OpenJDK (Java 7)
 
 Rails Developer
 ---------------
@@ -58,9 +56,3 @@ Some things are automatically installed while others are optional. Optional item
 * ImageMagick
 * RVM (Ruby Version Manager) with these rubies: 1.8.7 stable and 1.9.2 stable
 * A bunch of gems required for almost any decent Rails application
-
-TODO
-----
-* Deal with nautilus-home.desktop file properly
-* Make browser opening at the end an optional action
-* Show more help information
