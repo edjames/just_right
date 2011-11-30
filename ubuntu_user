@@ -6,10 +6,10 @@ clear
 
 echo ; echo "You are about to set up your Ubuntu machine just right." ; echo
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/distro_warning)"
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/enter_to_begin)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/distro_warning)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/enter_to_begin)"
 
-bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/apt-update)"
+bash -c "$(curl -s https://raw.github.com/edjames/just_right/${GIT_BRANCH}/shared_assets/apt-update)"
 
 exit
 
