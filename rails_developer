@@ -32,10 +32,7 @@ _rails_developer_asset "ssh"
 _rails_developer_asset "mysql"
 _rails_developer_asset "ack"
 _rails_developer_asset "imagemagick"
-
-echo -n "Do you want to install MongoDB? (y/n) "
-read USER_CONFIRM
-[ "$USER_CONFIRM" = "y" ] && _rails_developer_asset "mongodb"
+_rails_developer_asset "mongodb"
 
 cat << MSG
 
