@@ -51,6 +51,7 @@ Some things are automatically installed while others are optional. Optional item
 * Ruby 1.8.7 from Ubuntu repostories with additional libraries
 * Git and Git Gui
 * MySQL 5.1 with admin GUI tools
+* Nginx
 * MongoDB 2.0.1 - optional
 * ack
 * ImageMagick

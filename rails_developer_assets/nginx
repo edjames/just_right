@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo ; echo "Installing Nginx ... " ; echo
+  sudo add-apt-repository ppa:nginx/stable -y
+  sudo apt-get update  -qq
+  sudo apt-get install nginx -y -qq
