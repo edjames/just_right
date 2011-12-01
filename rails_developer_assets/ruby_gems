@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
+echo ; echo "Installing some default gems ..." ; echo
+
 echo "Installing Rails to write and run web applications ..."
   gem install rails --no-rdoc --no-ri
 

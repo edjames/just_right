@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing ImageMagick, good for cropping and re-sizing images ..."
+echo ; echo "Installing ImageMagick, good for cropping and re-sizing images ..." ; echo
   sudo apt-get install imagemagick --fix-missing -y

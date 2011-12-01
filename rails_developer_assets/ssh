@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Checking for SSH key ..."
+echo ; echo "Checking for SSH key ..." ; echo
 if [[ -f ~/.ssh/id_rsa.pub ]]; then
   echo -n 'Default SSH key already exists. '
 fi

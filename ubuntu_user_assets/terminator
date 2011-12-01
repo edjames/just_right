@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing Terminator ..."
+echo ; echo "Installing Terminator ..." ; echo
   sudo apt-get install terminator -y -qq
