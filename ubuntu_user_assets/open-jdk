@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo -n "Installing OpenJDK (Java 7) ..."
+echo ; echo -n "Installing OpenJDK (Java 7) ..." ; echo
   sudo apt-get install openjdk-7-jre -y -qq

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing GNOME Tweak Tool ..."
+echo ; echo "Installing GNOME Tweak Tool ..." ; echo
   sudo apt-get install gnome-tweak-tool -y -qq

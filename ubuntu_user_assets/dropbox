@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing Dropbox ..."
+echo ; echo "Installing Dropbox ..." ; echo
   sudo apt-get install nautilus-dropbox -y -qq

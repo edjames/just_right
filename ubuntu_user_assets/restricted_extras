@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..."
+echo ; echo "Installing Ubuntu Restricted Extras and enabling full DVD playback ..." ; echo
   sudo apt-get install ubuntu-restricted-extras libdvdread4 -y -qq
   sudo /usr/share/doc/libdvdread4/install-css.sh

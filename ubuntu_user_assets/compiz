@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing Compiz Config Settings Manager ..."
+echo ; echo "Installing Compiz Config Settings Manager ..." ; echo
   sudo apt-get install compizconfig-settings-manager -y -qq

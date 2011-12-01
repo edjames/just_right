@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Installing Configuration Editor (dconf-tools) ..."
+echo ; echo "Installing Configuration Editor (dconf-tools) ..." ; echo
   sudo apt-get install dconf-tools -y -qq

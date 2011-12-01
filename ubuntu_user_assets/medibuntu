@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Adding medibuntu repositories ..."
+echo ; echo "Adding medibuntu repositories ..." ; echo
   sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list
   sudo apt-get update -qq
   sudo apt-get install medibuntu-keyring -y -qq --allow-unauthenticated

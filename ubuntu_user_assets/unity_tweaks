@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo " ** Asset ** "
-echo "Applying Unity tweaks ..."
+echo ; echo "Applying Unity tweaks ..." ; echo
 
 unity_file="/usr/share/applications/nautilus-home.desktop"
 
