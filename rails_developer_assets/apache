@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo ; echo "Installing Apache ... " ; echo
+  sudo apt-get install apache2 apache2-prefork-dev -y -qq
+  sudo echo "ServerName localhost" > /etc/apache2/httpd.conf

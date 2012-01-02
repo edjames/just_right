@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
 
-echo ; echo "Installing some default gems ..." ; echo
-
-echo "Installing Rails to write and run web applications ..."
+echo ; echo "Installing Rails ..." ; echo
   gem install rails --no-rdoc --no-ri
 
-echo "Installing the database gems ..."
-  gem install mysql2 sqlite3 capistrano capistrano-ext hirb wirble --no-rdoc --no-ri
+echo ; echo "Installing JavaScript runtime gems ..." ; echo
+  gem install execjs therubyracer --no-rdoc --no-ri
 
-echo "Installing the deployment gems ..."
+echo ; echo "Installing the database gems ..." ; echo
+  gem install mysql2 sqlite3 mongoid --no-rdoc --no-ri
+
+echo ; echo "Installing the deployment gems ..." ; echo
   gem install capistrano capistrano-ext --no-rdoc --no-ri
 
-echo "Installing the console gems ..."
+echo ; echo "Installing the console gems ..." ; echo
   gem install hirb wirble --no-rdoc --no-ri
 
-echo "Installing the testing gems ..."
+echo ; echo "Installing the testing gems ..." ; echo
   gem install capybara capybara-webkit cucumber-rails factory_girl_rails launchy mocha ruby_parser shoulda rspec-rails --no-rdoc --no-ri
+
+echo ; echo "Installing Passenger and Apache module ..." ; echo
+  gem install passenger --no-rdoc --no-ri
+  rvmsudo passenger-install-apache2-module

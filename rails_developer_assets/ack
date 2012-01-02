@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo ; echo "Installing ack, a good way to search through files ..." ; echo
-  sudo apt-get install ack-grep -y
+  sudo apt-get install ack-grep -y -qq

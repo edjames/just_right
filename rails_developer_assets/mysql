@@ -2,3 +2,8 @@
 
 echo ; echo "Installing MySQL 5.1. You will need to enter a root password ..." ; echo
   sudo apt-get install mysql-client-5.1 mysql-server-5.1 libmysqlclient-dev libmysql-ruby mysql-admin -y -qq
+
+echo ; echo "Installing MySQL Workbench ..." ; echo
+  sudo add-apt-repository ppa:olivier-berten/misc -y
+  sudo apt-get update -qq
+  sudo apt-get install mysql-workbench-gpl -y -qq

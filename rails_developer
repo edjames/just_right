@@ -25,12 +25,12 @@ clear
 echo "Retrieving new lists of packages ..."
   sudo apt-get update -qq
 
+_rails_developer_asset "ssh"
 _rails_developer_asset "libraries"
 _rails_developer_asset "rvm"
 _rails_developer_asset "ruby_gems"
-_rails_developer_asset "ssh"
 _rails_developer_asset "mysql"
-_rails_developer_asset "nginx"
+_rails_developer_asset "apache"
 _rails_developer_asset "ack"
 _rails_developer_asset "imagemagick"
 _rails_developer_asset "mongodb"
